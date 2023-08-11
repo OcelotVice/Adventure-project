@@ -16,10 +16,15 @@ class World {
         // Get name, id and description from room data
         for (let i = 0 ; i < roomList.length ; i++) {
 
+
             let roomData = roomList[i];
             let newRoom = new Room(roomData.name, roomData.description);
 
+            let sandwich = new Food("sandwich", "a delicious sandwich");
+            if (roomData.id == 2) newRoom.items.push(sandwich);
             this.rooms[roomData.id] = newRoom;
+
+
         }
 
         // Connect rooms by ID
@@ -56,6 +61,7 @@ class World {
        }
 
     }
+
 }
 
 module.exports = {

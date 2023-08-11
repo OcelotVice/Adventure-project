@@ -51,10 +51,10 @@ describe ('Item', function () {
     expect(room.items.length).to.equal(1);
     expect(player.items.length).to.equal(0);
 
-    player.takeItem("rock");
+    player.takeItem("rock");//"rock"
 
-    expect(room.items.length).to.equal(0);
-    expect(player.items.length).to.equal(1);
+    expect(room.items.length).to.equal(0);//0
+    expect(player.items.length).to.equal(1);//1
 
     expect(player.getItemByName("rock")).to.equal(item);
 
